@@ -1,15 +1,12 @@
 {
-  "name": "week2.1",
+  "name": "week2",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "type": "commonjs",
+  "private": true,
   "dependencies": {
     "moment": "^2.30.1"
   }

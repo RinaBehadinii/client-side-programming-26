@@ -14,12 +14,13 @@ console.log("Hello World!");
 // Create an object representing a person and print the name property
 
 const person = {
-    name:"John",
+    name: "John",
     surname: "Doe",
-    age: 30,
+    age: 25,
 }
 
 console.log(person.name);
+console.log(person.surname);
 
 // ==========================
 // Destructuring Example
@@ -27,9 +28,9 @@ console.log(person.name);
 
 // Using destructuring extract the name from the previous object
 
-const {surname} = person;
+const {name} = person;
 
-console.log(surname);
+console.log(name);
 
 // ==========================
 // Array Example
@@ -37,10 +38,9 @@ console.log(surname);
 
 // Create an array of five numbers and print the second number
 
-const numbers = [1,2,3,4,5];
+const numbers = [1, 2, 3, 4, 5];
 
 console.log(numbers[1]);
-
 
 // ==========================
 // Filter Even Numbers
@@ -48,13 +48,11 @@ console.log(numbers[1]);
 
 // Given an array, filter out even numbers using filter()
 
-const randomNumbers = [1,2,3,4,5,6,7,8,9,10];
+const randomNumbers= [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
-const oddNumbers =randomNumbers.filter((number)=> number%2 !== 0);
-const evenNumbers = randomNumbers.filter((number)=> number%2 === 0);
+const oddNumbers = randomNumbers.filter((number)=> number%2 !== 0);
 
 console.log(oddNumbers);
-console.log(evenNumbers );
 
 // ==========================
 // Square Numbers
@@ -62,9 +60,9 @@ console.log(evenNumbers );
 
 // Given an array, return a new array with squared numbers using map()
 
-const anotherRandomNumbers = [1,2,3,4,5,6,7,8,9,10];
+const anotherList = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
-const squaredNumbers = anotherRandomNumbers.map((number)=> number*number);
+const squaredNumbers = anotherList.map((number) => number * number);
 
 console.log(squaredNumbers);
 
@@ -74,7 +72,9 @@ console.log(squaredNumbers);
 
 // Given an array, find the maximum number using reduce()
 
-const maximum = anotherRandomNumbers.reduce((max, number)=> max > number ? max : number);
+const randomList = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+const maximum = randomList.reduce((max, number) => max< number ? number : max);
 
 console.log(maximum);
 
@@ -84,13 +84,16 @@ console.log(maximum);
 
 // Double all even numbers in an array using filter() and map()
 
-const random= [1,2,3,4,5,6,7,8,9,10];
+const lastList = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
-const evenNumbersList = random.filter((number)=> number%2 === 0);
+const evenNumbers = lastList.filter((number)=> number%2 === 0);
+const doubledNumbers = evenNumbers.map((number)=> number*2);
 
-const squaredEvenNumbers = evenNumbersList.map((number)=> number*number);
+//Another way of writing the code
+// const evenDoubledNumbers =lastList.filter((number)=> number%2 === 0).map((number)=> number*2);
 
-console.log(squaredEvenNumbers);
+console.log(doubledNumbers);
+
 
 // ==========================
 // Moment.js Example
@@ -105,10 +108,10 @@ const moment = require("moment");
 
 // 3. Get the current date and time
 
-const today = moment();
+const today=moment();
 
 console.log(today.format("YYYY-MM-DD HH:mm:ss"));
 
 // 4. Format a specific date
 
-console.log(today.format("YYYY/MM/DD"));
+console.log(today.format("YYYY/MM/DD HH"));
